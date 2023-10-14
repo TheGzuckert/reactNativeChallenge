@@ -22,9 +22,9 @@ https://www.figma.com/file/0C6Q3745Lk9jLDLluRR1Pb/ToDo-List-%E2%80%A2-Desafio-Re
 ### Requesitos Funcionais
 
 - [x] Cadastrar
-- [] Marcar como feito
-- [] Deletar
-- [] Contabilidar Criadas e Concluidas
+- [ ] Marcar como feito
+- [ ] Deletar
+- [ ] Contabilidar Criadas e Concluidas
 
 
 ### Requesitos não funcionais

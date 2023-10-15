@@ -5,31 +5,43 @@ import { styles } from './styles';
 import { Task } from '../../components/tasks'
 
 export function Home() {
-  const [tasks, setNewTask] =  useState<String[]>([]);
+  const [tasks, setTask] = useState<string[]>([]);
   const [taskName, setTaskName] = useState('');
 
 
-  function handleTaskAdd(){
-    if (tasks.includes(taskName)){
-      return  Alert.alert(' A task já foi adicionada', 'Adicione uma tafera diferente')
+  function handleTaskAdd() {
+    if (tasks.includes(taskName)) {
+      return Alert.alert(' A task já foi adicionada', 'Adicione uma tafera diferente')
     }
-    setNewTask(prevState => [...prevState, taskName])
+    setTask(prevState => [...prevState, taskName])
     setTaskName('')
   }
 
   function handleTaskRemove(task: String) {
-
-    Alert.alert('Remover Task', `Tem certeza que você remover ${task}?`,[
+    Alert.alert('Remover Task', `Tem certeza que você deseja remover ${task}?`, [
       {
         text: 'Sim',
-        onPress: () =>  Alert.alert('Task removida', 'Task removida com sucesso')
+        onPress: () => setTask(prevState => prevState.filter(taskName => taskName !== task))
       },
       {
         text: 'Não',
       }
     ])
-
   }
+
+  function handleTaskDone(task: String) {
+
+    Alert.alert('Task concluída', `Tem certeza que você concluiu ${task}?`, [
+      {
+        text: 'Sim',
+        onPress: () => Alert.alert('Task concluída', 'Task concluída com sucesso')
+      },
+      {
+        text: 'Não',
+      }
+    ])
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -72,22 +84,22 @@ export function Home() {
               key={item}
               task={item}
               onRemove={() => handleTaskRemove(item)}
-              onCheck={() => handleTaskRemove(item)}
+              onCheck={() => handleTaskDone(item)}
             />
           )}
           showsHorizontalScrollIndicator={false}
           ListEmptyComponent={() => (
             <View>
               <View style={styles.borderTask}></View>
-                <Image style={styles.clipBoard}
-                  source={require('../../../assets/Clipboard.png')}
-                />
-                <Text style={styles.emptyCommentBold}>
-                  Você ainda não tem tarefas cadastradas
-                </Text>
-                <Text style={styles.emptyComment}>
-                  Crie tarefas e organize seus itens a fazer
-                </Text>
+              <Image style={styles.clipBoard}
+                source={require('../../../assets/Clipboard.png')}
+              />
+              <Text style={styles.emptyCommentBold}>
+                Você ainda não tem tarefas cadastradas
+              </Text>
+              <Text style={styles.emptyComment}>
+                Crie tarefas e organize seus itens a fazer
+              </Text>
             </View>
           )}
         />

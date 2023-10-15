@@ -26,7 +26,6 @@ https://www.figma.com/file/0C6Q3745Lk9jLDLluRR1Pb/ToDo-List-%E2%80%A2-Desafio-Re
 - [] Deletar
 - [] Contabilidar Criadas e Concluidas
 
-
 ### Requesitos não funcionais
 
 - [x] Mensagem quando não a tasks

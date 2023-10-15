@@ -30,8 +30,7 @@ export function Home() {
   }
 
   function handleTaskDone(task: String) {
-
-    Alert.alert('Task concluída', `Tem certeza que você concluiu ${task}?`, [
+    Alert.alert('Deseja concluir a Task?', `Tem certeza que você concluiu ${task}?`, [
       {
         text: 'Sim',
         onPress: () => Alert.alert('Task concluída', 'Task concluída com sucesso')

@@ -2,14 +2,14 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    width: '95%',
     backgroundColor: '#262626',
     borderRadius: 8,
-    padding: 12.5,
+    padding: 6,
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,
-    marginTop: 8,
+    marginLeft: 10,
   },
   tasks: {
     flex: 1,
@@ -21,14 +21,14 @@ export const styles = StyleSheet.create({
     width: 56,
     height: 56,
     backgroundColor: '#262626',
-    alignItems: 'center', // para alinhar na horizontal
+    alignItems: 'center',
     justifyContent: 'center'
   },
   buttonRemove: {
     width: 56,
     height: 56,
     backgroundColor: '#262626',
-    alignItems: 'center', // para alinhar na horizontal
+    alignItems: 'center',
     justifyContent: 'center'
   },
   ckeckIcon:{

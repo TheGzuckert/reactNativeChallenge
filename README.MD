@@ -1,4 +1,4 @@
-## Challenge React Native - RockeactSeat
+## Challenge React Native
 
 ### Proposta
 Fazer um toDoLsit em React Native apenas com o desig no figma
